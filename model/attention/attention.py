@@ -1,6 +1,19 @@
 import tensorflow as tf
 
+from .self_attention import SelfAttention
 from model.utils import Dense, LayerNorm
+
+
+class BertAttention:
+    def __init__(self, config):
+        self.attention = SelfAttention(config)
+        self.output = BERTSelfOutput(config)
+
+    @tf.function
+    def forward(self, input_tensor, attention_mask):
+        self_output = self.attention.forward(input_tensor, attention_mask)
+        attention_output = self.output.forward(self_output, input_tensor)
+        return attention_output
 
 
 class BERTSelfOutput:
