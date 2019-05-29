@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-from model.utils import Dense, GELU
+from ..utils import Dense, GELU
 
 
 class BERTIntermediate:

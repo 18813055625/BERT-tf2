@@ -1,7 +1,7 @@
 import tensorflow as tf
 
 from .self_attention import SelfAttention
-from model.utils import Dense, LayerNorm
+from ..utils import Dense, LayerNorm
 
 
 class BertAttention:

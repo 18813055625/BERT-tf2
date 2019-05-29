@@ -1,7 +1,7 @@
 import tensorflow as tf
 import math
 
-from model.utils.dense import Dense
+from ..utils import Dense
 
 
 class SelfAttention:

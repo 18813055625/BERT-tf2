@@ -1,8 +1,8 @@
 import tensorflow as tf
 
-from model.attention.attention import BertAttention
 from .intermediate import BERTIntermediate
-from model.utils import LayerNorm, Dense
+from ..attention import BertAttention
+from ..utils import LayerNorm, Dense
 
 
 class BertLayer:

@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-from model.utils.layer_norm import LayerNorm
+from ..utils import LayerNorm
 
 
 class BERTEmbedding:
